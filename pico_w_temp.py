@@ -14,12 +14,14 @@ print(wlan.ifconfig())
 adc = machine.ADC(4) 
 LED = machine.Pin("LED", machine.Pin.OUT)
 
-#mqtt config
-mqtt_server = '192.168.50.223'
-client_id = 'PicoW'
-user_t = USERNAME'
-password_t = 'PASSWORD'
+#Topic in this case will be hello
 topic_pub = 'hello'
+
+# Setup for the mqqt broker
+mqtt_server = 'IP-TO-BROKER'
+client_id = 'PicoW'
+user_t = 'YOUR-USERNAME'
+password_t = 'YOUR-PASSWORD'
 
 last_message = 0
 message_interval = 5
